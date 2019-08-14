@@ -1,0 +1,2603 @@
+/home/ankit/NLP/API_NLP
+ * Serving Flask app "app_nlp" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/home/ankit/NLP/API_NLP/Autotagging/TaggingMain.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/Relevancy/preprocess.py:17: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/Sentiment/sentiment.py:8: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/TextSummary/summarization.py:12: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 77, in wrapper
+    raise RateLimitException('too many calls', period_remaining)
+ratelimit.exception.RateLimitException: too many calls
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 1690: invalid start byte
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 79, in relevancy
+    text = jObj['body']
+TypeError: string indices must be integers
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 79, in relevancy
+    text = jObj['body']
+TypeError: string indices must be integers
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 82, in relevancy
+    result = prominanceProbablity((request.data).decode("utf-8"), corefs)
+  File "/home/ankit/NLP/API_NLP/Relevancy/RelevancyProbability.py", line 9, in prominanceProbablity
+    keywords = str(jObj['keywords'])
+KeyError: 'keywords'
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 77, in wrapper
+    raise RateLimitException('too many calls', period_remaining)
+ratelimit.exception.RateLimitException: too many calls
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 77, in wrapper
+    raise RateLimitException('too many calls', period_remaining)
+ratelimit.exception.RateLimitException: too many calls
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 77, in wrapper
+    raise RateLimitException('too many calls', period_remaining)
+ratelimit.exception.RateLimitException: too many calls
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 77, in wrapper
+    raise RateLimitException('too many calls', period_remaining)
+ratelimit.exception.RateLimitException: too many calls
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Unexpected character found when decoding object value
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 78, in relevancy
+    jObj = json.loads((request.data).decode("utf-8"))
+ValueError: Trailing data
+/home/ankit/NLP/API_NLP
+ * Serving Flask app "app_nlp" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/home/ankit/NLP/API_NLP/Autotagging/TaggingMain.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/Relevancy/preprocess.py:17: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/Sentiment/sentiment.py:8: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/TextSummary/summarization.py:12: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 98, in sentiment
+    restp = sentiments(text)
+  File "/home/ankit/NLP/API_NLP/Sentiment/sentiment.py", line 117, in sentiments
+    if list_Text.index(data[1]) == 0 or list_Text.index(data[1])>3:
+ValueError: 'Top' is not in list
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 98, in sentiment
+    restp = sentiments(text)
+  File "/home/ankit/NLP/API_NLP/Sentiment/sentiment.py", line 117, in sentiments
+    if list_Text.index(data[1]) == 0 or list_Text.index(data[1])>3:
+ValueError: 'Top' is not in list
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 98, in sentiment
+    restp = sentiments(text)
+  File "/home/ankit/NLP/API_NLP/Sentiment/sentiment.py", line 117, in sentiments
+    if list_Text.index(data[1]) == 0 or list_Text.index(data[1])>3:
+ValueError: 'Top' is not in list
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 258, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2328, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2314, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1760, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/ratelimit/decorators.py", line 80, in wrapper
+    return func(*args, **kargs)
+  File "/home/ankit/NLP/API_NLP/routes/request_api9.py", line 98, in sentiment
+    restp = sentiments(text)
+  File "/home/ankit/NLP/API_NLP/Sentiment/sentiment.py", line 117, in sentiments
+    if list_Text.index(data[1]) == 0 or list_Text.index(data[1])>3:
+ValueError: 'Top' is not in list
+/home/ankit/NLP/API_NLP
+ * Serving Flask app "app_nlp" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/home/ankit/NLP/API_NLP/Autotagging/TaggingMain.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/Relevancy/preprocess.py:17: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/Sentiment/sentiment.py:8: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/ankit/NLP/API_NLP/TextSummary/summarization.py:12: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+Traceback (most recent call last):
+  File "app_nlp.py", line 42, in <module>
+    app.run(host=host,port=port)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 944, in run
+    run_simple(host, port, self, **options)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 814, in run_simple
+    inner()
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 774, in inner
+    fd=fd)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 660, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/home/ankit/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 577, in __init__
+    self.address_family), handler)
+  File "/usr/lib/python3.5/socketserver.py", line 440, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.5/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.5/socketserver.py", line 454, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+/home/ankit/NLP/API_NLP
+ * Serving Flask app "app_nlp" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/home/sumit/Desktop/NLP/API_NLP
+ * Serving Flask app "app_nlp" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/home/sumit/Desktop/NLP/API_NLP/Autotagging/TaggingMain.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/sumit/Desktop/NLP/API_NLP/Relevancy/preprocess.py:17: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/sumit/Desktop/NLP/API_NLP/Sentiment/sentiment.py:8: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+/home/sumit/Desktop/NLP/API_NLP/TextSummary/summarization.py:12: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(yml_file)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)

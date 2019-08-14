@@ -1,0 +1,12 @@
+host : 'http://192.168.12.39'
+port : 9000
+#props :{'annotators': 'coref','pipelineLanguage': 'en', 'timeout': 5000000000}
+
+executeontology_main:
+  host: '192.168.12.39'
+  port: 9200
+  index_name: 'advanced-ontology-isentia_sports'
+
+text_files:
+  negative: '/Sentiment/negative-words.txt'
+  positive: '/Sentiment/positive-words.txt'

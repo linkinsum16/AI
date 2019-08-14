@@ -1,0 +1,215 @@
+swagger: "2.0"
+info:
+  description: "At Ninestars, we understand that harnessing the digital force is a journey and not a destination and our seamless assortment of expertise and experience puts us in the perfect position to help our clients’ futureproof their digital journey."
+  version: "1.0.0"
+  title: "API SERVICES"
+  contact: "http://ninestars.in/contactus/"
+
+#host: "http://0.0.0.0:5000"
+#basePath: "/v2"
+tags:
+  - name: "Prana Services"
+    description: "AI Services for text"
+    externalDocs:
+      description: "Find out more"
+      url: "http://aistax.com/"
+
+schemes:
+  - "http"
+paths:
+  /sentiment:
+    post:
+      tags:
+        - "Prana Services"
+
+      consumes:
+        - "application/json"
+        - "application/xml"
+      produces:
+        - "application/xml"
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Please provide article and keywords(in format as shown in sample example) for sentiment analysis"
+          required: true
+          schema:
+            $ref: "#/definitions/Body"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: "OK (successfully authenticated)"
+
+        401:
+          $ref: "#/responses/UnauthorizedError"
+      security:
+        - SenApi_key: []
+        - SenId: []
+  /summarization:
+    post:
+      tags:
+        - "Prana Services"
+      #      summary: "Add a new pet to the store"
+      #      description: ""
+      #      operationId: "addPet"
+      consumes:
+        - "application/json"
+        - "application/xml"
+      produces:
+        - "application/xml"
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Please provide article (in format as shown in sample example) for Text summarization"
+          required: true
+          schema:
+            $ref: "#/definitions/Keywords"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: "OK (successfully authenticated)"
+
+        401:
+          $ref: "#/responses/UnauthorizedError"
+      security:
+        - SumApi_key: []
+        - SumId: []
+  /advanced-tag:
+    post:
+      tags:
+        - "Prana Services"
+      #      summary: "Add a new pet to the store"
+      #      description: ""
+      #      operationId: "addPet"
+      consumes:
+        - "application/json"
+        - "application/xml"
+      produces:
+        - "application/xml"
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Please provide article and keywords(in format as shown in sample example) for tagging of article"
+          required: true
+          schema:
+            $ref: "#/definitions/Body"
+      responses:
+        405:
+          description: "Invalid input"
+
+        200:
+          description: "OK (successfully authenticated)"
+
+        401:
+          $ref: "#/responses/UnauthorizedError"
+      security:
+        - TagApi_key: []
+        - TagId: []
+  /relevancy:
+    post:
+      tags:
+        - "Prana Services"
+      #      summary: "Add a new pet to the store"
+      #      description: ""
+      #      operationId: "addPet"
+      consumes:
+        - "application/json"
+        - "application/xml"
+      produces:
+        - "application/xml"
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Please provide article(in format as shown in sample example) for relevancy of article"
+          required: true
+          schema:
+            $ref: "#/definitions/Keywords"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description: "OK (successfully authenticated)"
+
+        '401':
+          $ref: "#/responses/UnauthorizedError"
+      security:
+
+        - RelApi_key: []
+        - RelId: []
+
+
+
+securityDefinitions:
+  SumApi_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+  SumId:
+    type: "apiKey"
+    in: "header"
+    name: "api_id"
+  RelApi_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+  RelId:
+      type: "apiKey"
+      in: "header"
+      name: "api_id"
+  TagApi_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+  TagId:
+    type: "apiKey"
+    in: "header"
+    name: "api_id"
+  SenApi_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+  SenId:
+    type: "apiKey"
+    in: "header"
+    name: "api_id"
+definitions:
+
+  Body:
+    type: "object"
+    required:
+      - "BODY"
+
+    properties:
+
+      body:
+        type: "string"
+        example: "Well, you people [journalists] possibly only mix around with the classes, but we meet mostly the masses. Prime Minister Narendra Modi has managed to convert the chaotic situation under which he took over in 2014 into one of confidence.For example, 50 crore poor of the country had lost belief in the multi-party, parliamentary system when faced with rampant casteism, and things like that. Now, in the last five years, 22 crore poor have been shown that they too have a stake in democracy, in the vikas yatra (journey of development) of this country.Secondly, since 1990, when terrorism first peaked in this country, somewhere people always had a question mark at the back of their mind about the security scenario. In the last five years, the biggest achievement of the Narendra Modi government has been separation of foreign policy and defence-security policy and in this, security policy has been prioritised. The air strikes and modernisation of the defence forces have increased the trust among the people.Thirdly, we took charge after the ₹12 lakh crore scam-tainted government, and have given a transparent, corruption-free government. The economy was off the rails; former Prime Minister Dr. Manmohan Singh had left the country at the 11th position among world economies, something that Atalji [former Prime Ninister Atal Bihari Vajpayee] had already done. Now, however, we have become sixth in that list and will be breaking into the top five soon.Price rise is more or less under control, and I consider it a positive, pro-government issue for us that it is not the kind of issue in this election as it used to be in previous ones.The biggest point is that the country’s respect has grown in the world. The Indian Prime Minister’s opinion is valued in various fora like Davos, Climate Change [Conference] or Solar Alliance. Prime Minister Modi’s transparent, hardworking, decisive and at the same time sensitive leadership has made the difference."
+
+
+  Keywords:
+    type: "object"
+    required:
+      - "KEYWORDS"
+
+    properties:
+
+      body:
+        type: "string"
+        example: "Well, you people [journalists] possibly only mix around with the classes, but we meet mostly the masses. Prime Minister Narendra Modi has managed to convert the chaotic situation under which he took over in 2014 into one of confidence.For example, 50 crore poor of the country had lost belief in the multi-party, parliamentary system when faced with rampant casteism, and things like that. Now, in the last five years, 22 crore poor have been shown that they too have a stake in democracy, in the vikas yatra (journey of development) of this country.Secondly, since 1990, when terrorism first peaked in this country, somewhere people always had a question mark at the back of their mind about the security scenario. In the last five years, the biggest achievement of the Narendra Modi government has been separation of foreign policy and defence-security policy and in this, security policy has been prioritised. The air strikes and modernisation of the defence forces have increased the trust among the people.Thirdly, we took charge after the ₹12 lakh crore scam-tainted government, and have given a transparent, corruption-free government. The economy was off the rails; former Prime Minister Dr. Manmohan Singh had left the country at the 11th position among world economies, something that Atalji [former Prime Ninister Atal Bihari Vajpayee] had already done. Now, however, we have become sixth in that list and will be breaking into the top five soon.Price rise is more or less under control, and I consider it a positive, pro-government issue for us that it is not the kind of issue in this election as it used to be in previous ones.The biggest point is that the country’s respect has grown in the world. The Indian Prime Minister’s opinion is valued in various fora like Davos, Climate Change [Conference] or Solar Alliance. Prime Minister Modi’s transparent, hardworking, decisive and at the same time sensitive leadership has made the difference."
+      keywords:
+        type: "string"
+        example: "people,journalists,Prime, Minister, Narendra, Modi,Manmohan,Singh,Atal,Bihari,Vajpayee,country"
+
+responses:
+  UnauthorizedError:
+    description: "API key is missing or invalid"
+
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

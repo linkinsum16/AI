@@ -1,0 +1,186 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "PRANA",
+    "version": "1.0.0",
+    "title": "PRANA",
+    "contact": {
+      "email": ""
+    }
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "PRANA",
+      "description": "API for requesting and return multiple requests"
+    }
+  ],
+  "paths": {
+    "/summarization": {
+      "post": {
+        "tags": [
+          "Text Summary"
+        ],
+        "summary": "Create a summary of the text",
+        "requestBody": {
+          "description": "Text Request Post",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/summarization"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "body",
+            "required": true,
+            "description": "Request Tagging",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/advanced-tag": {
+      "post": {
+        "tags": [
+          "Tagging"
+        ],
+        "summary": "Provides tagging of the text",
+        "requestBody": {
+          "description": "Text Request Post",
+          "required": true,
+          "content": {
+            "application/json": {
+              "body": "abc"
+
+
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/sentiment": {
+      "post": {
+        "tags": [
+          "Sentiments"
+        ],
+        "summary": "Provides Sentiment of the text",
+        "requestBody": {
+          "description": "Text Request Post",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/sentiment"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/relevancy": {
+      "post": {
+        "tags": [
+          "Relevancy"
+        ],
+        "summary": "Provides relevancy of the article",
+        "requestBody": {
+          "description": "Text Request Post",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/relevancy"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    }
+  },
+
+  "components": {
+    "schemas": {
+      "id": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string",
+            "format": "string"
+          },
+          "keywords": {
+            "type": "string",
+            "format": "string"
+
+          }
+        }
+      }
+    }
+  }
+}
